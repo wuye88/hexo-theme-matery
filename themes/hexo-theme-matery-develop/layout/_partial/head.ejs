@@ -76,6 +76,9 @@
     <title><%= pageTitle %></title>
     <link rel="icon" type="<%= iconType %>" href="<%- theme.jsDelivr.url %><%- url_for(theme.favicon) %>">
     <%- partial('_partial/main-style') %>
+    <!-- 引入loading.css -->
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for('/css/loading.css') %>">
+
 
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.jquery) %>"></script>
 
