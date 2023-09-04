@@ -12,8 +12,8 @@ menu:
         url: /categories/linux
       - name: python
         url: /categories/python
-      - name: 博客
-        url: /categories/博客
+      - name: blog
+        url: /categories/blog
   Archives:
     url: /tags
     icon: fas fa-sitemap
