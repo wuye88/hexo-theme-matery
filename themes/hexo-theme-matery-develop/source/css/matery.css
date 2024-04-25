@@ -1256,6 +1256,14 @@ thead {
     padding: 6px 6px;
 }
 
+/**
+    修复表格不能居中的问题
+**/
+#articleContent table th[align="center"],
+#articleContent table td[align="center"] {
+    text-align: center;
+}
+
 #articleContent [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
     position: inherit;
