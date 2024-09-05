@@ -498,7 +498,7 @@ libs:
   js:
     matery: /js/matery.js
     sc2tc: /js/tw_cn.js
-    jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
+    jquery: /libs/jquery/jquery-3.6.0.min.js #3.6.0 20211109
     materialize: /libs/materialize/materialize.min.js # 1.2.1 20230106
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
@@ -604,12 +604,12 @@ tuxiaochao:
   productId:
 #背景canvas-nest
 canvas_nest:
-  enable: false
-  color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  enable: true
+  color: 122,103,238 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
-  zIndex: -1 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
-  count: 99 # 线条的总数量, 默认: 99
+  zIndex: -2 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
+  count: 200 # 线条的总数量, 默认: 99
 
 # 背景静止彩带.
 ribbon:
@@ -684,7 +684,7 @@ icp:
   url: # 备案链接
   text: # 备案信息
 
-# CDN访问加速 
+# CDN访问加速
 # 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
 # 如果必须要使用国内的coding或者gitee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
 # URL配置规则（例子如下）： https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
@@ -695,7 +695,7 @@ icp:
 # 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在上面设置js及css路径中可以直接写.min.xxx
 jsDelivr:
   url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
-  
+
 # 网站背景图
 background:
   enable: false
@@ -753,7 +753,7 @@ bbtime:
 # {% endmermaid %}
 # mermaid chart。 依赖hexo-tag-mermaid
 mermaid: ## mermaid url https://github.com/knsv/mermaid
-  enable: false  # default false
+  enable: false # default false
   version: "latest" # default v7.1.2
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
