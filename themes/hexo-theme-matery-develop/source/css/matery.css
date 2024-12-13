@@ -122,7 +122,7 @@ pre {
 
 code {
     padding: 1px 5px;
-    top: 13px !important;
+    /* top: 13px !important; 此行代码会导致代码块下移，进而导致代码内容时背景错乱和移动端出现下拉滚动条的问题 */  
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
     color: #e96900;
@@ -2316,6 +2316,6 @@ body.DarkMode .theme-btn:hover {
     border-radius: 3em; 
 } 
 ::-webkit-scrollbar { 
-    width: 8px; 
-    height: 15px; 
+    width: 8px;   /* 垂直滚动条宽度 */
+    height: 10px; /* 水平滚动条宽度 */
 }
