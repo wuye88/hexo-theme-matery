@@ -103,7 +103,9 @@ theme: hexo-theme-matery-develop
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+- type: cjh_google_url_submitter
+- type: cjh_bing_url_submitter
+- type: cjh_baidu_url_submitter
 
 # ---------------------------------   扩展
 # npm i -S hexo-prism-plugin 高亮   # 因为hexo5.0之后自带代码高亮，且mastery进行了改造支持，所以不需要此插件
@@ -125,6 +127,7 @@ lazyload:
   enable: true # 是否开启图片懒加载
   onlypost: false # 是否只对文章的图片做懒加载
   loadingImg: /loading.gif # eg ./images/loading.gif
+  preloadRatio: 3 # 预加载比当前屏幕尺寸多多少倍的图像，默认值为1
 # 小人
 live2d:
   enable: true
@@ -169,4 +172,31 @@ jsdelivr_auto_fallback:
     - cdn.jsdelivr.net
     - fastly.jsdelivr.net
     - gcore.jsdelivr.net
+# npm install hexo-generator-sitemap --save        sitemap.xml适合提交给谷歌搜素引擎
+# npm install hexo-generator-baidu-sitemap --save  baidusitemap.xml适合提交百度搜索引擎
+sitemap:
+  path: 
+    - wuye_sitemap.xml
+    - wuye_sitemap.txt
+baidusitemap:
+  path: wuye_baidusitemap.xml
+# npm install --save hexo-submit-urls-to-search-engine
+hexo_submit_urls_to_search_engine:
+  submit_condition: count #链接被提交的条件，可选值：count | period 现仅支持count
+  count: 10 # 提交最新的10个链接
+  period: 900 # 提交修改时间在 900 秒内的链接
+  google: 0 # 是否向Google提交，可选值：1 | 0（0：否；1：是）
+  bing: 0 # 是否向bing提交，可选值：1 | 0（0：否；1：是）
+  baidu: 1 # 是否向baidu提交，可选值：1 | 0（0：否；1：是）
+  txt_path: submit_urls.txt ## 文本文档名， 需要推送的链接会保存在此文本文档里
+  baidu_host: https://wuyea.top ## 在百度站长平台中注册的域名
+  baidu_token: 请按照文档说明获取 ## 请注意这是您的秘钥， 所以请不要把它直接发布在公众仓库里!
+  bing_host: <你的域名> ## 在bing站长平台中注册的域名
+  bing_token: 请按照文档说明获取 ## 请注意这是您的秘钥， 所以请不要把它直接发布在公众仓库里!
+  google_host: <你的域名> ## 在google站长平台中注册的域名
+  google_key_file: Project.json #存放google key的json文件，放于网站根目录（与hexo _config.yml文件位置相同），请不要把json文件内容直接发布在公众仓库里!
+  google_proxy: 0 # 向谷歌提交网址所使用的系统 http 代理，填 0 不使用
+  replace: 0  # 是否替换链接中的部分字符串，可选值：1 | 0（0：否；1：是）
+  find_what: http://cjh0613.github.io/blog # 要替换的内容
+  replace_with: https://cjh0613.com  # 替换之后的内容
 # ---------------------------------   扩展结束

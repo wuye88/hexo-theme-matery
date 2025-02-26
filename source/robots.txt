@@ -1,0 +1,23 @@
+User-agent: Googlebot
+Crawl-delay: 5
+
+User-agent: Bingbot
+Sitemap: https://wuyea.top/sitemap.xml
+
+User-agent: Baiduspider
+Sitemap: https://wuyea.top/baidusitemap.xml
+
+User-agent: *
+Disallow: /friends/
+Disallow: /contact/
+Disallow: /js/
+Disallow: /css/
+Disallow: /libs/
+Disallow: /fonts/
+Disallow: /medias/
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.gif$
+Disallow: /*.png$
+Disallow: /*.bmp$
+Sitemap: https://wuyea.top/sitemap.xml

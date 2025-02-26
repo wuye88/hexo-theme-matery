@@ -2,6 +2,8 @@
 
 > 一个基于材料设计和响应式设计而成的全面、美观的Hexo主题，本主题是在原作者主题的基础上进行自定义修改，原作者地址：<https://github.com/blinkfox/hexo-theme-matery>
 
+这里是我的hexo matery的优化配置，效果见博客地址：https://wuyea.top/
+
 # Hexo常用命令
 
 > Hexo官方文档：https://hexo.io/docs/  ；https://github.com/hexojs/hexo
